@@ -1,0 +1,6 @@
+{
+  "singleQuote": true,
+  "trailingComs": all,
+  "toWidth": 2,
+  "endOfLine": "auto"
+}
