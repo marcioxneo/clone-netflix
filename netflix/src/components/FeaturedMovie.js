@@ -1,5 +1,8 @@
 import React from 'react'
 import './FeaturedMovie.css'
+import env from 'react-dotenv'
+
+const backdrop = env.BACKDROP
 
 export default ({item}) => {
 
@@ -13,7 +16,7 @@ export default ({item}) => {
     <section className="featured" style={{
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`
+      backgroundImage: `url(${backdrop}${item.backdrop_path})`
     }}>
       {/* <div>{item.original_name}</div> */}
       <div className="featured--vertical">

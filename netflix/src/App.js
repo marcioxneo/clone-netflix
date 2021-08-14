@@ -4,16 +4,21 @@ import Tmdb from './Tmdb'
 import MovieRow from './components/MovieRow'
 import FeaturedMovie from './components/FeaturedMovie'
 import Header from './components/Header'
+//import env from 'react-dotenv'
+
+
 
 export default () => {
 
   const [movieList, setMovieList] = useState([])
   const [featuredData, setFeaturedData] =  useState(null) 
   const [blackHeader, setBlackHeader] = useState(false)
+  //console.log(env.API_KEY)
 
   useEffect(() => {
     const loadAll = async () => {
-      // Pegando a liusta TOTAL
+      
+      // Pegando a lista TOTAL
       let list = await Tmdb.getHomeList()
       setMovieList(list)
 
@@ -25,7 +30,6 @@ export default () => {
       setFeaturedData(chosenInfo)
 
       console.log(chosenInfo)
-      
     }
 
     loadAll()
