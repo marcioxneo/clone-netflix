@@ -29,7 +29,7 @@ export default () => {
       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv')
       setFeaturedData(chosenInfo)
 
-      console.log(chosenInfo)
+      // console.log(chosenInfo)
     }
 
     loadAll()
@@ -72,7 +72,7 @@ export default () => {
        Direitos de imagem para Netflix<br/>
        Dados pegos do site
        <div className="tmdb--logo">
-          <a href="https://www.themoviedb.org">
+          <a href="https://www.themoviedb.org" target="_blank">
             <img 
             src={svgTmdb}
             alt="TMDB"
@@ -80,6 +80,12 @@ export default () => {
           </a>
        </div>
      </footer>
+
+     {movieList.length <= 0 &&
+      <div className="loading">
+        <img src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif" alt="carregando" />
+      </div>
+     }
     </div>
   );
 }
