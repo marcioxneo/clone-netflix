@@ -66,6 +66,20 @@ export default () => {
          <MovieRow key={key} title={item.title} items={item.items} />
        ))}
      </section>
+
+     <footer>
+       Feito com <span role="img" aria-label="coração">💖</span> pela W7Web<br/>
+       Direitos de imagem para Netflix<br/>
+       Dados pegos do site
+       <div className="tmdb--logo">
+          <a href="https://www.themoviedb.org">
+            <img 
+            src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" 
+            alt="TMDB"
+            />
+          </a>
+       </div>
+     </footer>
     </div>
   );
 }
