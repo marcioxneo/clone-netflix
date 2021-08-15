@@ -4,7 +4,7 @@ import Tmdb from './Tmdb'
 import MovieRow from './components/MovieRow'
 import FeaturedMovie from './components/FeaturedMovie'
 import Header from './components/Header'
-//import env from 'react-dotenv'
+import env from 'react-dotenv'
 
 
 
@@ -13,7 +13,7 @@ export default () => {
   const [movieList, setMovieList] = useState([])
   const [featuredData, setFeaturedData] =  useState(null) 
   const [blackHeader, setBlackHeader] = useState(false)
-  //console.log(env.API_KEY)
+  const svgTmdb = env.SVG_TMDB
 
   useEffect(() => {
     const loadAll = async () => {
@@ -74,7 +74,7 @@ export default () => {
        <div className="tmdb--logo">
           <a href="https://www.themoviedb.org">
             <img 
-            src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" 
+            src={svgTmdb}
             alt="TMDB"
             />
           </a>
